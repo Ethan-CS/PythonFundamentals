@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>01_SyntaxAndVariables</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>04_Lists</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,27 +14259,105 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-Fundamentals-1:-Syntax-and-Variables">Python Fundamentals 1: Syntax and Variables<a class="anchor-link" href="#Python-Fundamentals-1:-Syntax-and-Variables">&#182;</a></h1><p>This Jupyter Notebook will introduce you to the fundamentals of Python (and programming generally), as well as the use of Jupyter notebooks - a very useful tool in data science. This notebook assumes that you already have Python installed!</p>
-<p>To get the most out of these notebooks, I would encourage you to interact with each Python cell - change values, names, use new methods, copy-paste into wherever you edit Python files and use the code however you like. Have fun with it and see what you can get out of it!</p>
+<h1 id="Python-Fundamentals-3:-Lists">Python Fundamentals 3: Lists<a class="anchor-link" href="#Python-Fundamentals-3:-Lists">&#182;</a></h1><p>Lists are a common way of storing several items inside of a single variable. Other ways to do this are with <code>Tuple</code>, <code>Set</code> and <code>Dictionary</code>, which we will look more at in future.</p>
+<p>We create a list in Python using square brackets, like so:</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Hello-World!">Hello World!<a class="anchor-link" href="#Hello-World!">&#182;</a></h2><p>The first task <em>any</em> programmer learns to complete is the "Hello world" exercise - printing the phrase "Hello world" to the 'standard output' - this is sometimes called the console, terminal and so on.</p>
-<h3 id="Exercise-1:-Hello,-world!">Exercise 1: Hello, world!<a class="anchor-link" href="#Exercise-1:-Hello,-world!">&#182;</a></h3><p>Instead of creating a new Python file, we're going to use this Jupyter notebook to run the hello world program. In the empty cell below, type</p>
-<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<p>The items in a list are ordered (meaning their order remains the same unless you change it in your code), changeable (also known as mutable, meaning you can adjust the size, elements and so on without too much hassle) and allow duplicate values.</p>
+<p>We can find the length of a list using the <code>len()</code> function:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The list </span><span class="si">{</span><span class="n">my_list</span><span class="si">}</span><span class="s2"> is of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
-<p>and hit shift + enter. You should see the output just below the box where you typed the code.</p>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>The list [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;] is of length 3
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We don't need to restrict our lists to containing strings. We can have lists of integers, floats, booleans, complex numbers - anything we like. We can even have a combination of data types in a list:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">]</span>
+<span class="n">integer_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">boolean_list</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">mixed_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="mi">5</span><span class="n">j</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14290,19 +14368,19 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-Syntax">Python Syntax<a class="anchor-link" href="#Python-Syntax">&#182;</a></h2><p>Syntax in programming refers to the rules that dictate the correct way to give orders to the computer. For instance, in Java you end a line with a semicolon and in Python, you use indentation (space at the start of a line of code) to indicate a dependent block of code. Let's see an example.</p>
-<p>I'm going to use a logical test that I know to be true: 2 + 2 = 4. My code to illustrate the way we use indents in Python will start by checking whether this is true (which, of course, it will be) and then, if it is true,  print a message to the standard output. I'm going to write this two ways - the first will have the correct indent, the second won't - compare the difference between the two.</p>
+<p>This direct declaration isn't the only way to create a new list. We can use something called the <code>list()</code> constructor to create new lists, like so (note the double brackets):</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Correct indentation</span>
-<span class="k">if</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Two plus two is four!&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">))</span>
+<span class="n">integer_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">boolean_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">))</span>
+<span class="n">mixed_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="mi">5</span><span class="n">j</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14310,146 +14388,28 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Two plus two is four!
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Incorrect indentation</span>
-<span class="k">if</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Two plus two is four!&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-4-0ef1606ceb93&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">3</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    print(&#34;Two plus two is four!&#34;)</span>
-<span class="ansi-white-intense-fg ansi-bold">    ^</span>
-<span class="ansi-red-intense-fg ansi-bold">IndentationError</span><span class="ansi-red-intense-fg ansi-bold">:</span> expected an indented block
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>You can see the second version, which does not have an indent, returns an <code>IndentationError</code> - this is Python telling me I've made a mistake with my indentation in my code, which I have. This is crucial - in most other programming languages, indentation is there to help code readability, but Python places specific meaning on indents.</p>
-<p>I can choose how I want to indent in Python - in the above example, the correct code snippet used a usual indent, which is equivalent to 4 spaces (achieved by hitting the tab key), but I might instead choose 1 or 2 spaces. In that case, I would have to ensure all of the indents in my entire Python file were consistent, or again I'd get an error (say if I used 2 spaces to indent one code block and the usual 4 spaces somewhere else).</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h2><p>We can assign names to values in Python, which are called variables. Variables act like containers for values - they can be accessed whenever you like, changed, overwritten - whatever you like. For instance:</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;Hello :)&quot;</span>
-  
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>      <span class="c1"># This should print the number 10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>  <span class="c1"># This should print the message &quot;Hello :)&quot;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>10
-Hello :)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Variable-Types">Variable Types<a class="anchor-link" href="#Variable-Types">&#182;</a></h4><p>Sometimes we need to specify what type of variable we're storing - that is, in example 2, I had one variable that stored an integer number and another that stored a 'string', which is a sequence of characters. There are other types too:</p>
+<h2 id="Accessing-List-Items">Accessing List Items<a class="anchor-link" href="#Accessing-List-Items">&#182;</a></h2><p>Each list is indexed from left to right, beginning at 0. We can use these indices to access specific elements or collection of elements in a list in a number of ways.</p>
 <ul>
-<li><code>int</code> - a whole number (no decimals or fractions), can be positive or negative.</li>
-<li><code>float</code> - A number with a decimal part to it, named after floating point representation (the common way we write decimal numbers) such as 3.14 or 2.0</li>
-<li><code>complex</code> - a number with both real and imaginary parts, where imaginary refers to $i = \sqrt{-1}$, represented in the form <code>x + 2y</code>.</li>
-<li><code>bool</code> - a Boolean value, which is either <code>True</code> or <code>False</code> - note the capital letters!</li>
-<li><code>String</code> - a sequence of characters, which must be surrounded by quote marks (single, double or triple are all accepted).</li>
-<li><code>List</code> - An ordered collection of data items, which don't need to be of the same type, inside of square brackets, e.g. <code>[1, 7.9, "Hello", complex(1,3)]</code></li>
-<li><code>Tuple</code> - Same as a list, but in ordinary brackets, e.g. <code>(1, 7.9, "Hello", complex(1,3))</code></li>
-<li><code>Dictionary</code> - an unordered collection of data stored in a key:value form, e.g. <code>{"Name":"Ethan", "DOB":29041999, "Favourite Food":"Mashed Potato"}</code>.</li>
+<li>We can use the index number to get a particular element, counting from left to right: <code>0</code> refers to the first element, <code>1</code> is the second and so on.</li>
+<li>We can use <em>negative indexing</em> to count from right to left: <code>-1</code> refers to the last element in the list, <code>-2</code> is the second-last item and so on.</li>
+<li>We can use a range to get a sublist between the specified indices: <code>[2:5]</code> means get a list made of the elements at positions <code>2</code>, <code>3</code> and <code>4</code> (the start index is inclusive, the last index is exclusive)</li>
 </ul>
-<p>Say I wanted to get a user's age from the standard input. I would use the function <code>input()</code> to get the age and perhaps assign it to a variable <code>age</code>, like so:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">,</span> <span class="s2">&quot;grapefruit&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarin&quot;</span><span class="p">,</span> <span class="s2">&quot;citron&quot;</span><span class="p">,</span> <span class="s2">&quot;pomelo&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Access the element at position 1, which should be &quot;lime&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Final element in list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># List of elements 2, 3 and 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># Elements from 4 from the end to 1 from the end</span>
 </pre></div>
 
      </div>
@@ -14469,8 +14429,10 @@ Hello :)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Please enter your age: 21
-You are 21 years old.
+<pre>lime
+pomelo
+[&#39;lemon&#39;, &#39;grapefruit&#39;, &#39;mandarin&#39;]
+[&#39;lemon&#39;, &#39;grapefruit&#39;, &#39;mandarin&#39;]
 </pre>
 </div>
 </div>
@@ -14482,17 +14444,19 @@ You are 21 years old.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>By default, Python assumes that the input I obtained is a string (<code>str</code>). Hence, if I wanted to do anything numerical with this age, like compare it to another number and see who is older or add it to another number and find a combined age, I would have to tell Python that the input I obtained was an integer. This is called <em>casting</em>, and in this example I would need to wrap the <code>input("...")</code> function inside of <code>int()</code>, like so:</p>
+<p>We can get Python to check if an element exists in a list, too using <code>if</code> and <code>in</code>:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your age: &quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">,</span> <span class="s2">&quot;grapefruit&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarin&quot;</span><span class="p">,</span> <span class="s2">&quot;citron&quot;</span><span class="p">,</span> <span class="s2">&quot;pomelo&quot;</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="s2">&quot;mandarin&quot;</span> <span class="ow">in</span> <span class="n">my_list</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am the delicious Miss Mandarin!&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14512,8 +14476,7 @@ You are 21 years old.
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Please enter your age: 21
-You are 21 years old.
+<pre>I am the delicious Miss Mandarin!
 </pre>
 </div>
 </div>
@@ -14525,86 +14488,75 @@ You are 21 years old.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I can get the type of a variable back, too: for this, I use the <code>type()</code> function.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ethan&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>    <span class="c1"># Tells me what type of variable pi is</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># Tells me what type of variable name is</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;float&#39;&gt;
-&lt;class &#39;str&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Variable-name-conventions">Variable name conventions<a class="anchor-link" href="#Variable-name-conventions">&#182;</a></h4><p>There are a few rules about variable names that you need to follow and a few that you should follow. Variable names must start with either a letter or the underscore character, they cannot start with a number (but can contain numbers elsewhere), can contain only alphanumeric characters and undersocres and they are case sensitive.</p>
-<p>It's the programmer's choice as to what naming convention for variables they would like to follow. The common three are:</p>
+<h2 id="List-Methods">List Methods<a class="anchor-link" href="#List-Methods">&#182;</a></h2><p>We can reassign a specific element of a list or change a range of items in Python and even insert new items. For this, we have lots of built-in methods in Python:</p>
 <ul>
-<li>Camel case: <code>myVariableName</code></li>
-<li>Pascal case: <code>MyVariableName</code></li>
-<li><p>Snake case: <code>my_variable_name</code></p>
-<p>#### Multiple variables</p>
-<p>You can simplify your code using multiple variables to:</p>
+<li>Access a particular element using <code>name_of_list[i]</code> where <code>i</code> is the index of the element</li>
+<li>Access a range of elements using <code>name_of_list[i:j]</code> where <code>i</code> is the start index (inclusive) and <code>j</code> is the end index (exclusive)</li>
+<li>Get the index of a particular element using <code>name_of_list.index(element)</code></li>
+<li>Insert an element using <code>name_of_list.insert(i, element)</code> where <code>i</code> is the index you want <code>element</code> to be at</li>
+<li>Add a new element to the end of the list using <code>name_of_list.append(element)</code></li>
+<li>Add another list onto the end of the list using <code>name_of_list.extend(list_to_add)</code>. There are other ways to do this too:<ul>
+<li><code>name_of_list + list_to_add</code></li>
+<li><code>name_of_list.append(list_to_add)</code></li>
+</ul>
 </li>
-<li>Assign several variables at one time,</li>
-<li>Assign several variables the same value,</li>
-<li><em>Unpack</em> a list/tuple/etc.</li>
+<li>Remove a specific element (without referencing index) using <code>name_of_list.remove(element)</code></li>
+<li>Remove an element at a specified index with <code>name_of_list.pop(i)</code> where <code>i</code> is the specified index. If you want to remove the last element, leave this blank and just use <code>pop()</code>.</li>
+<li>Copy a list using <code>name_of_list.copy()</code></li>
+<li>Clear the whole list using <code>name_of_list.clear()</code>.</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Assign several variables to several values</span>
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;First&quot;</span><span class="p">,</span> <span class="s2">&quot;Second&quot;</span><span class="p">,</span> <span class="s2">&quot;Third&quot;</span>
-<span class="c1"># Here, &#39;+&#39; means print a AND print a space AND print b AND ...</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">+</span> <span class="n">c</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">,</span> <span class="s2">&quot;grapefruit&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarin&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 
-<span class="c1"># Assign several variables to the same values</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">e</span> <span class="o">=</span> <span class="n">f</span> <span class="o">=</span> <span class="s2">&quot;Fourth&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
+<span class="c1"># Changing a single element</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;clementine&quot;</span>  <span class="c1"># No one likes grapefruit</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 
-<span class="c1"># Unpacking a list</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ethan&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Ponyo&quot;</span><span class="p">]</span>
-<span class="n">me</span><span class="p">,</span> <span class="n">you</span><span class="p">,</span> <span class="n">ponyo</span> <span class="o">=</span> <span class="n">my_list</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">me</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">you</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">ponyo</span><span class="p">)</span>
+<span class="c1"># Changing two elements at the same time</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;pomelo&quot;</span><span class="p">]</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Get the index of an element</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;lemon&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># Insert a new item</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;satsuma&quot;</span><span class="p">)</span>  
+<span class="c1"># 3 is the index position to add the element to, &quot;satsuma&quot; is the element to be added</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Append (insert at end) a new item</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;citron&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Extend list with another list</span>
+<span class="n">to_add</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;pear&quot;</span><span class="p">]</span>  <span class="c1"># The list to stick on the end</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">to_add</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Remove a particular item</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Remove last item in the list</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Copy the list</span>
+<span class="n">my_new_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_new_list</span><span class="p">)</span>
+
+<span class="c1"># Clear the whole list</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14624,9 +14576,17 @@ You are 21 years old.
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>First Second Third
-Fourth Fourth Fourth
-Ethan Ben Ponyo
+<pre>[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;grapefruit&#39;, &#39;mandarin&#39;]
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;clementine&#39;, &#39;mandarin&#39;]
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;kumquat&#39;, &#39;pomelo&#39;]
+2
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;satsuma&#39;, &#39;kumquat&#39;, &#39;pomelo&#39;]
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;satsuma&#39;, &#39;kumquat&#39;, &#39;pomelo&#39;, &#39;citron&#39;]
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;satsuma&#39;, &#39;kumquat&#39;, &#39;pomelo&#39;, &#39;citron&#39;, &#39;apple&#39;, &#39;peach&#39;, &#39;pear&#39;]
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;satsuma&#39;, &#39;kumquat&#39;, &#39;pomelo&#39;, &#39;citron&#39;, &#39;peach&#39;, &#39;pear&#39;]
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;satsuma&#39;, &#39;kumquat&#39;, &#39;pomelo&#39;, &#39;citron&#39;, &#39;peach&#39;]
+[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;satsuma&#39;, &#39;kumquat&#39;, &#39;pomelo&#39;, &#39;citron&#39;, &#39;peach&#39;]
+[]
 </pre>
 </div>
 </div>
@@ -14638,41 +14598,30 @@ Ethan Ben Ponyo
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Global-variables">Global variables<a class="anchor-link" href="#Global-variables">&#182;</a></h4><p>If you create a variable outside of any function, it's known as a <em>global variable.</em> They can be used inside and outside of your functions. If you go on to create a variable of the same name inside of a function, that's an example of a <em>local variable</em> and will not overwrite the global variable generally, just for that particular function. If we really want to, we can declare a global variable inside of a method using the keyword 'global'.</p>
+<h2 id="Loop-through-a-list">Loop through a list<a class="anchor-link" href="#Loop-through-a-list">&#182;</a></h2><p>We haven't looked much at loops yet, but hopefully this isn't too hard to follow. We could print all items using a <code>for</code> loop or using a <code>while</code> loop:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Global variables</span>
-<span class="n">me</span> <span class="o">=</span> <span class="s2">&quot;Ethan&quot;</span>
-<span class="n">fav_colour</span> <span class="o">=</span> <span class="s2">&quot;Yellow&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Global variables initially: &quot;</span> <span class="o">+</span> <span class="n">me</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">fav_colour</span><span class="p">)</span>
+<span class="c1"># FOR loop</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span> <span class="p">:</span>  <span class="c1"># For i between 0 and the length of the list</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1"># Print the element at index i</span>
+    
+<span class="nb">print</span><span class="p">()</span>  <span class="c1"># Print a blank line</span>
 
-<span class="k">def</span> <span class="nf">my_original_function</span><span class="p">():</span>  <span class="c1"># This is how we define a new function</span>
-    <span class="c1"># Try printing with the global variables</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This is </span><span class="si">{</span><span class="n">me</span><span class="si">}</span><span class="s2">&#39;s function. My favourite colour is </span><span class="si">{</span><span class="n">fav_colour</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="c1"># WHILE loop</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># start off at element 0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="p">:</span>  <span class="c1"># while i is less than the length of the list</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1"># print the element at index i</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increase i by 1</span>
     
-    
-<span class="k">def</span> <span class="nf">my_new_function</span><span class="p">():</span>
-    <span class="c1"># Locally overwrite the first global variable</span>
-    <span class="n">me</span> <span class="o">=</span> <span class="s2">&quot;Ben&quot;</span>
-    <span class="c1"># Use global keyword to overwrite variable globally</span>
-    <span class="k">global</span> <span class="n">fav_colour</span>
-    <span class="n">fav_colour</span> <span class="o">=</span> <span class="s2">&quot;that one specific shade of blue&quot;</span>
-    
-    <span class="c1"># Try printing with the locally overwritten global variables</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This is </span><span class="si">{</span><span class="n">me</span><span class="si">}</span><span class="s2">&#39;s function. My favourite colour is </span><span class="si">{</span><span class="n">fav_colour</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-    
-    
-<span class="n">my_original_function</span><span class="p">()</span>
-<span class="n">my_new_function</span><span class="p">()</span>
-<span class="c1"># What is the value of the variable now, Ethan or Ben?</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Global variables now: &quot;</span> <span class="o">+</span> <span class="n">me</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">fav_colour</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14692,10 +14641,137 @@ Ethan Ben Ponyo
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Global variables initially: Ethan, Yellow
-This is Ethan&#39;s function. My favourite colour is Yellow.
-This is Ben&#39;s function. My favourite colour is that one specific shade of blue.
-Global variables now: Ethan, that one specific shade of blue
+<pre>orange
+lime
+lemon
+
+orange
+lime
+lemon
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="List-comprehension">List comprehension<a class="anchor-link" href="#List-comprehension">&#182;</a></h2><p>List comprehension is a <em>really</em> useful way of examining lists in Python. Let's start with an example: say I have a list of integers and I want to get a new list of all numbers in the original that are even (divisible by two). We can do this using a <code>for</code> loop and an <code>if</code> statement, or we can use list comprehension:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>  <span class="c1"># Original list</span>
+<span class="c1"># New lists we&#39;ll store the even numbers in</span>
+<span class="n">even1</span> <span class="o">=</span> <span class="p">[]</span>  
+<span class="n">even2</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># FOR loop method</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="p">:</span>  <span class="c1"># Loop through entire list</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>  <span class="c1"># If the element we&#39;re looking at is even, add it to even list</span>
+        <span class="n">even1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">even1</span><span class="p">)</span>
+
+<span class="c1"># LIST COMPREHENSION method</span>
+<span class="n">even2</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">even2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[2, 4, 6, 16, 18, 22]
+[2, 4, 6, 16, 18, 22]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The list comprehension method is far shorter than the initial <code>for</code> loop method, but it's harder to understand so let's examine the syntax. The return value of the list comprehension is a new list and the original list is left in tact, and the way we use it is:</p>
+<div class="highlight"><pre><span></span><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+</pre></div>
+<ul>
+<li>The <code>condition</code> is a filter that only accepts items that evaluate to <code>True</code>. This is optional and won't always be used.</li>
+<li>The <code>iterable</code> part can be anything we can <em>iterate</em> over, like a <code>list</code>, <code>tuple</code>, <code>set</code> and so on.</li>
+<li>The <code>expression</code> is the current item in the iteration and the outcome, which we can set to whatever we like e.g. if we want to return a list with all values upper case, the expression would be <code>x.upper()</code></li>
+</ul>
+<p>Hence, the list comprehension in the previous example <code>[x for x in numbers if x % 2 == 0]</code> means "return the item from the list <code>numbers</code> if it is divisible by 2 (i.e. even)".</p>
+<h2 id="List-sorting">List sorting<a class="anchor-link" href="#List-sorting">&#182;</a></h2><p>We can use a number of different methods to sort lists:</p>
+<ul>
+<li><code>sort()</code> sorts the list alphanumerically, in ascending order by default and case sensitive</li>
+<li><code>sort(reverse = True)</code> sorts the list alphanumerically in <em>descending</em> order</li>
+<li><code>sort(key = str.lower)</code> sorts the list alphanumerically in ascending order and case _insensitive)</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">,</span> <span class="s2">&quot;grapefruit&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarin&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Sort ascending</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># Sort descending</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[&#39;orange&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;grapefruit&#39;, &#39;mandarin&#39;]
+[&#39;grapefruit&#39;, &#39;lemon&#39;, &#39;lime&#39;, &#39;mandarin&#39;, &#39;orange&#39;]
+[&#39;orange&#39;, &#39;mandarin&#39;, &#39;lime&#39;, &#39;lemon&#39;, &#39;grapefruit&#39;]
 </pre>
 </div>
 </div>
